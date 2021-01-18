@@ -8,7 +8,7 @@ public class RubyController : MonoBehaviour
 
     public readonly int maxHealth = 5;
     
-    public int health { get { return currentHealth; };  }
+    public int health { get { return currentHealth; }}
     int currentHealth;
 
 
@@ -35,10 +35,9 @@ public class RubyController : MonoBehaviour
         Vector2 position = rigidbody2d.position;
         position.x = position.x + speed * horizontal * Time.deltaTime;
         position.y = position.y + speed * vertical * Time.deltaTime;
-
         rigidbody2d.MovePosition(position);
     }
-
+    
     public void ChangeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
