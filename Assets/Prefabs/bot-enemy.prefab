@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -5357904263646702305}
   - component: {fileID: -4373528170028464246}
   - component: {fileID: -5584622580616130439}
+  - component: {fileID: 7918610793469549379}
   m_Layer: 0
   m_Name: bot-enemy
   m_TagString: Untagged
@@ -147,3 +148,22 @@ MonoBehaviour:
   speed: 1
   vertical: 1
   changeTime: 4
+--- !u!95 &7918610793469549379
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148283316849879067}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ef5b0999688d824880eaebe836728c3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
