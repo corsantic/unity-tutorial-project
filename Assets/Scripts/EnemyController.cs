@@ -15,7 +15,7 @@ public class EnemyController : MonoBehaviour
 
     float timer;
     int direction = 1;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,18 +23,22 @@ public class EnemyController : MonoBehaviour
         timer = changeTime;
         animator = GetComponent<Animator>();
     }
-    
-    private void Update() {
+
+    private void Update()
+    {
         timer -= Time.deltaTime;
-        if(timer < 0){
+        if (timer < 0)
+        {
             direction = -direction;
             timer = changeTime;
         }
     }
-    private void OnCollisionEnter2D(Collision2D other) {
+    private void OnCollisionEnter2D(Collision2D other)
+    {
         RubyController player = other.gameObject.GetComponent<RubyController>();
 
-        if(player != null) {
+        if (player != null)
+        {
             player.ChangeHealth(-1);
         }
     }
@@ -42,7 +46,7 @@ public class EnemyController : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 position = rigidbody2D.position;
-        
+
         if (vertical)
         {
             animator.SetFloat("Move X", 0);
@@ -55,7 +59,7 @@ public class EnemyController : MonoBehaviour
             animator.SetFloat("Move Y", 0);
             position.x = position.x + Time.deltaTime * speed * direction;
         }
-        
+
         rigidbody2D.MovePosition(position);
     }
 }
