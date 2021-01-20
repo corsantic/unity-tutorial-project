@@ -48,6 +48,7 @@ public class EnemyController : MonoBehaviour
     public void Fix() {
         broken = false;
         rigidbody2D.simulated = false; // This removes the Rigidbody from the Physics System simulation
+        animator.SetTrigger("Fixed");// this will trigger fixed transaction
     }
 
     void FixedUpdate()
